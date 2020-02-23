@@ -8,7 +8,7 @@
       {% if page.title %}
         {{ page.title }}
       {% else %}
-        文章页
+        关于
       {% endif %}
     </title>
 
@@ -19,42 +19,18 @@
 
     {% include favicon.html %}
 
-    <link rel="stylesheet" href="{{ "/assets/css/post.css" }}">
-    <link rel="stylesheet" href="{{ "/assets/css/prism.css" }}">
-    {% unless page.line_numbers != null and page.line_numbers == false %}
-    <link rel="stylesheet" href="{{ "/assets/css/prism-line-numbers.css" }}">
-    {% endunless %}
+    <link rel="stylesheet" href="{{ "/assets/css/about.css" }}">
     <link rel="stylesheet" href="{{ "/assets/css/markdown.css" }}">
     {% seo %}
     {% include statistics_head.html %}
   </head>
-
   <body>
-    <header>
-      {% include header_title.html %}
-      <p id="author" style="display: none">
-        {% if page.author %}
-        {{ page.author }}
-        {% elsif site.name %}
-        {{ site.name }}
-        {% endif %}
-      </p>
-
-      <div class="article-title-description">
-        <p>发表于 {{ page.date | date: "%Y-%m-%d" }} | 本文共 {{ page.content | number_of_words }} 字</p>
-      </div>
-    </header>
+    {% include header.html %}
 
     {% include content.html %}
 
     {% include footer.html %}
 
-    <script src="{{ "/assets/js/prism.js" }}"></script>
-    <script src="{{ "/assets/js/zooming.min.js" }}"></script>
-    
-    {% unless page.line_numbers != null and page.line_numbers == false %}
-    <script src="{{ "/assets/js/prism-line-numbers.js" }}"></script>
-    {% endunless %}
     <script src="{{ "/assets/js/post_content_init.js" }}"></script>
 
     {% if site.lock_menu and site.lock_menu == true %}
