@@ -20,7 +20,7 @@ description: hello world!
 
 github: https://github.com/tiger-ff
 email: wangpf321123@gmail.com
-rss: true
+rss: false
 
 plugins:
   - rouge
