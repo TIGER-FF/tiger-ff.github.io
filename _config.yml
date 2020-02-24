@@ -14,11 +14,12 @@ defaults:
     values:
       image: true
 
-title: Minimalism
-name: minimalism
-description: Minimalism is a jekyll theme for minimalist
+title: tiger-ff
+name: tiger-ff
+description: hello world!
 
-github: https://github.com/showzeng/Minimalism
+github: https://github.com/tiger-ff
+email: wangpf321123@gmail.com
 rss: true
 
 plugins:

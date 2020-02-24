@@ -1,45 +1,6 @@
 <div class="page-content">
   <div class="content" id="post-content">
     <p>{{ content }}</p>
-
-    <div class="licenses">
-      <hr>
-      <p>本作品采用<a rel="license"
-        href="http://creativecommons.org/licenses/by-nc-nd/4.0/"
-        target="_blank">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可。</p>
-    </div>
-
-    {% if site.reward and site.reward == true %}
-    {% unless page.reward != null and page.reward == false %}
-    <div class="reward">
-      <hr>
-      <div class="reward-qr-code" style="display: none">
-        {% assign image_files = site.static_files | where: "image", true %}
-        {% for image in image_files %}
-          {% if image.basename == 'alipay' or image.basename == 'wechat' %}
-          <div class="{{ image.basename }}">
-            <img src="{{ image.path }}" alt="{{ image.basename }} reward qr code">
-            {% case image.basename %}
-            {% when 'alipay' %}
-            <span>支付宝打赏</span>
-            {% when 'wechat' %}
-            <span>微信打赏</span>
-            {% endcase %}
-          </div>
-          {% endif %}
-        {% endfor %}
-      </div>
-
-      {% if site.reward_description %}
-      <p>{{ site.reward_description }}</p>
-      {% endif %}
-      <div id="btn-show-reward">
-        <div onclick="showReward()">赏</div>
-      </div>
-    </div>
-    {% endunless %}
-    {% endif %}
-
     {% if site.comment and site.comment == true %}
     {% unless page.comment != null and page.comment == false %}
 
