@@ -233,4 +233,4 @@ IMAGES_STORE = os.path.dirname(__file__) + "\images"
 
 文件分布：
 
-![image-20200421223257582](C:\Users\wangp\AppData\Roaming\Typora\typora-user-images\image-20200421223257582.png)
+![](..\_posts\2018-04-21-python-bwm.png)
