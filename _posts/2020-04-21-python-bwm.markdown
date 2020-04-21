@@ -233,4 +233,4 @@ IMAGES_STORE = os.path.dirname(__file__) + "\images"
 
 文件分布：
 
-![](..\_posts\2018-04-21-python-bwm.png)
+![](https://github.com/TIGER-FF/tiger-ff.github.io/blob/master/_posts/2018-04-21-python-bwm.png)
