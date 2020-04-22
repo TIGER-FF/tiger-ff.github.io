@@ -1,0 +1,62 @@
+---
+title: "mysql安装教程-windows"
+date: 2020/04/22 16:55:28 
+category: mysql
+tags: [mysql]
+excerpt: 转载的：https://www.cnblogs.com/zhangkanghui/p/9613844.html
+---
+
+### **1、安装包下载**
+
+**下载地址：https://dev.mysql.com/downloads/mysql/**
+
+**Mysql国内镜像：http://mirrors.sohu.com/mysql/MySQL-8.0/**
+
+**下载下来就是压缩包解压就行！**
+
+### **2 安装教程**
+
+#### **（1）配置环境变量**
+
+**D:\mysql\mysql-8.0.19-winx64     放在path下**
+
+#### **（2）生成data文件**
+
+**以管理员身份运行cmd，进入bin目录执行命令：mysqld --initialize-insecure --user=mysql    完了后会生成一个data文件夹**
+
+#### **（3） 安装MySQL**
+
+**继续执行命令：mysqld -install**
+
+#### **（4）启动服务**
+
+**继续执行命令：net start MySQL**
+
+#### **（5）登录MySQL**
+
+**mysql -u root -p**
+
+**登录mysql(因为之前没设置密码，所以密码为空，不用输入密码，直接回车即可，进入mysql后命令都是以分号结束）**
+
+#### **（6）查询用户密码**
+
+**查询用户密码命令：select host,user,authentication_string from mysql.user;**
+
+#### **（7）设置（或修改）root用户密码**
+
+**第一步选择：use mysql**；
+
+**第二步修改密码：mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';**
+
+**第三步刷新：flush privileges;** 
+
+**第四步退出：quit;**
+
+#### **（8）再次登录**
+
+**mysql -u root -p**
+
+**输入自己刚才设置的密码就行！**
+
+
+
