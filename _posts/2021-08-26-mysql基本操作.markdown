@@ -1,0 +1,46 @@
+---
+title: "mysql基本操作"
+date: 2021/08/26 10:24:28  
+category: mysql
+tags: [mysql]
+excerpt: 更新中
+---
+
+**mysql基本操作**
+
+ **查看当前版本：**
+
+select version();
+
+**查看隔离级别：**
+
+select @@tx_isolation；
+
+**查看是否是自动提交：**
+
+show variables like ‘autocommit';
+
+**设置开启自动提交：**
+
+set autocommit=1；
+
+**设置关闭自动提交：**
+
+set autocommit=0;
+
+**开启事务重点：**
+
+begin/start transaction 命令并不是一个事务的起点，在执行到它们之后的第一个操作 InnoDB 表的语句，事务才真正启动。如果你想要马上启动一个事务，可以使用 
+
+start transaction with consistent snapshot 这个命令。
+
+**参数 innodb_file_per_table表数据既可以存在共享表空间里，也可以是单独的文件。**
+
+**这个行为是由参数 innodb_file_per_table 控制的：这个参数设置为 OFF 表示的是，表的数据放在系统共享表空间，也就是跟数据字典放在一起；**
+
+**这个参数设置为 ON 表示的是，每个 InnoDB 表数据存储在一个以 .ibd 为后缀的文件中。从 MySQL 5.6.6 版本开始，它的默认值就是 ON 了。**
+
+**查看参数 innodb_file_per_table 是否开启命名：**
+
+show variables where variable_name='innodb_file_per_table'
+
